@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29324.140
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barley-break", "Barley-break\Barley-break.csproj", "{071FFBB4-1EED-47AE-B954-CDDB105314B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game Library", "Game Library\Game Library.csproj", "{7CD62D44-8449-4792-A2C7-91065B257736}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FithteenWPF", "FithteenWPF\FithteenWPF.csproj", "{88074CAF-AA20-4C54-90CE-331ED5E30E69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Barley-break 2", "Barley-break 2\Barley-break 2.csproj", "{45BA0440-CA88-4886-AC70-5C7100B4B940}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{071FFBB4-1EED-47AE-B954-CDDB105314B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{071FFBB4-1EED-47AE-B954-CDDB105314B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{071FFBB4-1EED-47AE-B954-CDDB105314B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{071FFBB4-1EED-47AE-B954-CDDB105314B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CD62D44-8449-4792-A2C7-91065B257736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD62D44-8449-4792-A2C7-91065B257736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD62D44-8449-4792-A2C7-91065B257736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD62D44-8449-4792-A2C7-91065B257736}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88074CAF-AA20-4C54-90CE-331ED5E30E69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88074CAF-AA20-4C54-90CE-331ED5E30E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88074CAF-AA20-4C54-90CE-331ED5E30E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88074CAF-AA20-4C54-90CE-331ED5E30E69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45BA0440-CA88-4886-AC70-5C7100B4B940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45BA0440-CA88-4886-AC70-5C7100B4B940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45BA0440-CA88-4886-AC70-5C7100B4B940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45BA0440-CA88-4886-AC70-5C7100B4B940}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1639A630-0329-4B77-AED4-4D27D4539EC7}
+	EndGlobalSection
+EndGlobal

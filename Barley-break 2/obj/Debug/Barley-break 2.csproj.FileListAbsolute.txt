@@ -1,0 +1,9 @@
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break 2\bin\Debug\Barley-break 2.exe.config
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break 2\bin\Debug\Barley-break 2.exe
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break 2\bin\Debug\Barley-break 2.pdb
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break 2\obj\Debug\Barley-break 2.csprojAssemblyReference.cache
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break 2\obj\Debug\Barley_break_2.Form1.resources
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break 2\obj\Debug\Barley_break_2.Properties.Resources.resources
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break 2\obj\Debug\Barley-break 2.csproj.GenerateResource.cache
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break 2\obj\Debug\Barley-break 2.exe
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break 2\obj\Debug\Barley-break 2.pdb

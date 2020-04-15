@@ -1,0 +1,12 @@
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break Unliminted\bin\Debug\Barley-break Unliminted.exe.config
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break Unliminted\bin\Debug\Barley-break Unliminted.exe
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break Unliminted\bin\Debug\Barley-break Unliminted.pdb
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break Unliminted\obj\Debug\Barley_break_Unliminted.Form1.resources
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break Unliminted\obj\Debug\Barley_break_Unliminted.Properties.Resources.resources
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break Unliminted\obj\Debug\Barley-break Unliminted.csproj.GenerateResource.cache
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break Unliminted\obj\Debug\Barley-break Unliminted.exe
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break Unliminted\obj\Debug\Barley-break Unliminted.pdb
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break Unliminted\bin\Debug\Game Library.dll
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break Unliminted\bin\Debug\Game Library.pdb
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break Unliminted\obj\Debug\Barley-break Unliminted.csprojAssemblyReference.cache
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break Unliminted\obj\Debug\Barley-break Unliminted.csproj.CopyComplete
