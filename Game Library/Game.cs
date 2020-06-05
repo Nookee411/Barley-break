@@ -9,6 +9,7 @@ namespace Game_Library
     public class Game
     {
         static Random rand = new Random();
+        Carataker carataker;
         private int[,] field;
         int size;
         int x0;
@@ -22,6 +23,7 @@ namespace Game_Library
             x0 = 3;
             y0 = 3;
             turnCounter = 0;
+            carataker = new Carataker();
         }
 
         private int CoordinatesToPosition(int x, int y)
@@ -134,6 +136,95 @@ namespace Game_Library
             }
             return false;
         }
+
+        public void Save()
+        {
+            Memento state = new Memento(field);
+            carataker.Save(state);
+        }
+
+        public void Restore()
+        {
+            if(carataker.Size!=0)
+            field = carataker.Restore().State;
+            FindZero();
+            
+        }
+
+        private void FindZero()
+        {
+            for(int i=0;i<4;i++)
+            {
+                for(int j=0;j<4;j++)
+                {
+                    if(field[i,j]==0)
+                    {
+                        x0 = i;
+                        y0 = j;
+                    }
+                }
+            }
+        }
     }
+
+    public class Memento
+    {
+        //Field state
+        int[,] field;
+
+        public Memento(int [,]s)
+        {
+            field = new int[4, 4];
+            for(int i=0;i<4;i++)
+            {
+                for (int j = 0; j < 4; j++)
+                    field[i, j] = s[i,j];
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets state of game
+        /// </summary>
+        public int[,] State
+        {
+            get
+            {
+                return this.field;
+            }
+        } 
+    }
+
+    public class Carataker
+    {
+        /// <summary>
+        /// Stack of game states
+        /// </summary>
+        Stack<Memento> Mementos;
+        
+        public Carataker()
+        {
+            Mementos = new Stack<Memento>();
+        }
+
+        public int Size => Mementos.Count;
+        /// <summary>
+        /// Adds state to stack
+        /// </summary>
+        /// <param name="state"></param>
+        public void Save(Memento state)
+        {
+            Mementos.Push(state);
+        }
+
+        /// <summary>
+        /// Restores and deletes from stack
+        /// </summary>
+        /// <returns></returns>
+        public Memento Restore()
+        {
+            return Mementos.Peek();
+        }
+    }
+
 
 }

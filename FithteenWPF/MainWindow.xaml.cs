@@ -23,6 +23,7 @@ namespace FithteenWPF
     {
         Game game;
         DateTime startTime;
+        int turn = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -39,11 +40,12 @@ namespace FithteenWPF
         {
             int position = Convert.ToInt32(((Button)sender).Tag);
             game.Shift(position);
+            Turns.Header = "Turns: " + turn;
+            turn++;
             RefreshButtonField();
-            if (game.EndGameCheck())
-            {
+            if (game.EndGameCheck()){
+               
                 GameStart();
-
             }
         }
 
@@ -91,9 +93,11 @@ namespace FithteenWPF
         {
             game.Start();
             startTime = new DateTime();
-            for (int i = 0; i < 1000; i++)
+            for (int i = 0; i < 1; i++)
                 game.ShiftRandom();
             RefreshButtonField();
+            turn = 0;
+
         }
 
         private void Fifteen_Load(object sender, RoutedEventArgs e)

@@ -2,3 +2,5 @@ C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\La
 C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Game Library\bin\Debug\Game Library.pdb
 C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Game Library\obj\Debug\Game Library.dll
 C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Game Library\obj\Debug\Game Library.pdb
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Game Library\obj\Debug\Game Library.csprojAssemblyReference.cache
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Game Library\obj\Debug\Game Library.csproj.CoreCompileInputs.cache

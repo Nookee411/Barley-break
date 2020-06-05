@@ -179,5 +179,16 @@ namespace Barley_break
             startTime = startTime.AddSeconds(1);
             toolStripTimer.Text = "Time: " +startTime.ToString("mm:ss");
         }
+
+        private void stepBackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            game.Restore();
+            RefreshButtonField();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            game.Save();
+        }
     }
 }

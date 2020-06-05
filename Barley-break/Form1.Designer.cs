@@ -51,8 +51,11 @@
             this.button0 = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripCounter = new System.Windows.Forms.ToolStripLabel();
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.toolStripTimer = new System.Windows.Forms.ToolStripLabel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stepBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -61,7 +64,8 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.startMenu});
+            this.startMenu,
+            this.editToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(694, 24);
@@ -335,17 +339,40 @@
             this.toolStripCounter.Size = new System.Drawing.Size(49, 25);
             this.toolStripCounter.Text = "Turns: 0";
             // 
+            // toolStripTimer
+            // 
+            this.toolStripTimer.Name = "toolStripTimer";
+            this.toolStripTimer.Size = new System.Drawing.Size(67, 25);
+            this.toolStripTimer.Text = "Time: 00:00";
+            // 
             // timer
             // 
             this.timer.Enabled = true;
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // toolStripTimer
+            // editToolStripMenuItem
             // 
-            this.toolStripTimer.Name = "toolStripTimer";
-            this.toolStripTimer.Size = new System.Drawing.Size(67, 25);
-            this.toolStripTimer.Text = "Time: 00:00";
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stepBackToolStripMenuItem,
+            this.saveToolStripMenuItem});
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // stepBackToolStripMenuItem
+            // 
+            this.stepBackToolStripMenuItem.Name = "stepBackToolStripMenuItem";
+            this.stepBackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stepBackToolStripMenuItem.Text = "Return to save";
+            this.stepBackToolStripMenuItem.Click += new System.EventHandler(this.stepBackToolStripMenuItem_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // Fifteen
             // 
@@ -396,6 +423,9 @@
         private System.Windows.Forms.ToolStripLabel toolStripCounter;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.ToolStripLabel toolStripTimer;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stepBackToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
     }
 }
 

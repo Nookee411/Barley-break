@@ -7,3 +7,4 @@ C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\La
 C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break 2\obj\Debug\Barley-break 2.csproj.GenerateResource.cache
 C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break 2\obj\Debug\Barley-break 2.exe
 C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break 2\obj\Debug\Barley-break 2.pdb
+C:\Users\danii\OneDrive\Desktop\Учеба\2 курс\2 семестр\ООП\Lab 4\Barley-break 2\obj\Debug\Barley-break 2.csproj.CoreCompileInputs.cache

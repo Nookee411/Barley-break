@@ -8,8 +8,10 @@
         Title="Barley-break" Height="500" Width="460" Loaded="Fifteen_Load">
     <DockPanel LastChildFill="true">
         <Menu DockPanel.Dock="Top">
-            <MenuItem Name="MenuSrartGame" Header="Start game" FontSize="16" Click="SrartGame">
-            </MenuItem>
+            <MenuItem Name="MenuSrartGame" Header="Start game" FontSize="16" Click="SrartGame"/>
+            <MenuItem Name="Turns" Header="Turns: " FontSize="16" IsEnabled="False"/>
+            <MenuItem Name="Time" Header="Time: " FontSize="16" IsEnabled="False"/>
+            
         </Menu>
         <UniformGrid Name="uniformGrid" DockPanel.Dock="Bottom" Rows="4" Columns="4" Margin="2,2,2,2" >
             <UniformGrid.Resources>
