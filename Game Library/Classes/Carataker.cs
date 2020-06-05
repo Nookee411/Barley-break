@@ -25,8 +25,14 @@ namespace Game_Library
         /// <param name="state"></param>
         public void Save(Memento state)
         {
-            if(Mementos.Count<=50)
+            try
+            {
                 Mementos.Push(state);
+            }
+            catch 
+            {
+                Mementos.Clear();
+            }
         }
 
         /// <summary>
