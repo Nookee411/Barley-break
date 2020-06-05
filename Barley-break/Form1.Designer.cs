@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fifteen));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.startMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stepBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button15 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -53,9 +55,6 @@
             this.toolStripCounter = new System.Windows.Forms.ToolStripLabel();
             this.toolStripTimer = new System.Windows.Forms.ToolStripLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.stepBackToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -78,6 +77,21 @@
             this.startMenu.Size = new System.Drawing.Size(76, 20);
             this.startMenu.Text = "New game";
             this.startMenu.Click += new System.EventHandler(this.startMenu_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stepBackToolStripMenuItem});
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // stepBackToolStripMenuItem
+            // 
+            this.stepBackToolStripMenuItem.Name = "stepBackToolStripMenuItem";
+            this.stepBackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.stepBackToolStripMenuItem.Text = "Step Back";
+            this.stepBackToolStripMenuItem.Click += new System.EventHandler(this.stepBackToolStripMenuItem_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -124,7 +138,7 @@
             this.button15.Tag = "15";
             this.button15.Text = "*";
             this.button15.UseVisualStyleBackColor = true;
-            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button15.Click += new System.EventHandler(this.button0_Click);
             // 
             // button14
             // 
@@ -137,7 +151,7 @@
             this.button14.Tag = "14";
             this.button14.Text = "*";
             this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.button14.Click += new System.EventHandler(this.button0_Click);
             // 
             // button13
             // 
@@ -150,7 +164,7 @@
             this.button13.Tag = "13";
             this.button13.Text = "*";
             this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.button13.Click += new System.EventHandler(this.button0_Click);
             // 
             // button12
             // 
@@ -163,7 +177,7 @@
             this.button12.Tag = "12";
             this.button12.Text = "*";
             this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.button12.Click += new System.EventHandler(this.button0_Click);
             // 
             // button11
             // 
@@ -176,7 +190,7 @@
             this.button11.Tag = "11";
             this.button11.Text = "*";
             this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.button11.Click += new System.EventHandler(this.button0_Click);
             // 
             // button10
             // 
@@ -189,7 +203,7 @@
             this.button10.Tag = "10";
             this.button10.Text = "*";
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.button10.Click += new System.EventHandler(this.button0_Click);
             // 
             // button9
             // 
@@ -202,7 +216,7 @@
             this.button9.Tag = "9";
             this.button9.Text = "*";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.button9.Click += new System.EventHandler(this.button0_Click);
             // 
             // button8
             // 
@@ -215,7 +229,7 @@
             this.button8.Tag = "8";
             this.button8.Text = "*";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.Click += new System.EventHandler(this.button0_Click);
             // 
             // button7
             // 
@@ -228,7 +242,7 @@
             this.button7.Tag = "7";
             this.button7.Text = "*";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Click += new System.EventHandler(this.button0_Click);
             // 
             // button6
             // 
@@ -241,7 +255,7 @@
             this.button6.Tag = "6";
             this.button6.Text = "*";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.button6.Click += new System.EventHandler(this.button0_Click);
             // 
             // button5
             // 
@@ -254,7 +268,7 @@
             this.button5.Tag = "5";
             this.button5.Text = "*";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.button0_Click);
             // 
             // button4
             // 
@@ -267,7 +281,7 @@
             this.button4.Tag = "4";
             this.button4.Text = "*";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.button0_Click);
             // 
             // button3
             // 
@@ -280,7 +294,7 @@
             this.button3.Tag = "3";
             this.button3.Text = "*";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.button0_Click);
             // 
             // button2
             // 
@@ -293,7 +307,7 @@
             this.button2.Tag = "2";
             this.button2.Text = "*";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button0_Click);
             // 
             // button1
             // 
@@ -306,7 +320,7 @@
             this.button1.Tag = "1";
             this.button1.Text = "*";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button0_Click);
             // 
             // button0
             // 
@@ -351,29 +365,6 @@
             this.timer.Interval = 1000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stepBackToolStripMenuItem,
-            this.saveToolStripMenuItem});
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "Edit";
-            // 
-            // stepBackToolStripMenuItem
-            // 
-            this.stepBackToolStripMenuItem.Name = "stepBackToolStripMenuItem";
-            this.stepBackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.stepBackToolStripMenuItem.Text = "Return to save";
-            this.stepBackToolStripMenuItem.Click += new System.EventHandler(this.stepBackToolStripMenuItem_Click);
-            // 
-            // saveToolStripMenuItem
-            // 
-            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.saveToolStripMenuItem.Text = "Save";
-            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
-            // 
             // Fifteen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,12 +373,15 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Fifteen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Barley-break";
             this.Load += new System.EventHandler(this.Fifteen_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Fifteen_KeyDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -425,7 +419,6 @@
         private System.Windows.Forms.ToolStripLabel toolStripTimer;
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem stepBackToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
     }
 }
 

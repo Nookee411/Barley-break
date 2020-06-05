@@ -167,64 +167,7 @@ namespace Game_Library
         }
     }
 
-    public class Memento
-    {
-        //Field state
-        int[,] field;
+    
 
-        public Memento(int [,]s)
-        {
-            field = new int[4, 4];
-            for(int i=0;i<4;i++)
-            {
-                for (int j = 0; j < 4; j++)
-                    field[i, j] = s[i,j];
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets state of game
-        /// </summary>
-        public int[,] State
-        {
-            get
-            {
-                return this.field;
-            }
-        } 
-    }
-
-    public class Carataker
-    {
-        /// <summary>
-        /// Stack of game states
-        /// </summary>
-        Stack<Memento> Mementos;
-        
-        public Carataker()
-        {
-            Mementos = new Stack<Memento>();
-        }
-
-        public int Size => Mementos.Count;
-        /// <summary>
-        /// Adds state to stack
-        /// </summary>
-        /// <param name="state"></param>
-        public void Save(Memento state)
-        {
-            Mementos.Push(state);
-        }
-
-        /// <summary>
-        /// Restores and deletes from stack
-        /// </summary>
-        /// <returns></returns>
-        public Memento Restore()
-        {
-            return Mementos.Peek();
-        }
-    }
-
-
+    
 }

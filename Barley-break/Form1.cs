@@ -86,10 +86,12 @@ namespace Barley_break
 
         private void button0_Click(object sender, EventArgs e)
         {
+            game.Save();
             int position = Convert.ToInt32(((Button)sender).Tag);
             game.Shift(position);
             RefreshButtonField();
             toolStripCounter.Text = "Turns: " + game.GetTurnCounter;
+            
             if (game.EndGameCheck())
             {
                 EndGameForm egf = new EndGameForm(game.GetTurnCounter, startTime);
@@ -99,81 +101,7 @@ namespace Barley_break
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            button0_Click(sender, e);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            button0_Click(sender, e);
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            button0_Click(sender, e);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            button0_Click(sender, e);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            button0_Click(sender, e);
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            button0_Click(sender, e);
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            button0_Click(sender, e);
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-            button0_Click(sender, e);
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-            button0_Click(sender, e);
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            button0_Click(sender, e);
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            button0_Click(sender, e);
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            button0_Click(sender, e);
-        }
-
-        private void button13_Click(object sender, EventArgs e)
-        {
-            button0_Click(sender, e);
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-            button0_Click(sender, e);
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            button0_Click(sender, e);
-        }
-
+       
         private void timer_Tick(object sender, EventArgs e)
         {
             startTime = startTime.AddSeconds(1);
@@ -186,9 +114,10 @@ namespace Barley_break
             RefreshButtonField();
         }
 
-        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        private void Fifteen_KeyDown(object sender, KeyEventArgs e)
         {
-            game.Save();
+            if (ModifierKeys == Keys.Control && e.KeyCode == Keys.Z)
+                stepBackToolStripMenuItem_Click(sender, e);
         }
     }
 }
