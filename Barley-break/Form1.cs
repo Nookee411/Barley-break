@@ -70,8 +70,7 @@ namespace Barley_break
             toolStripCounter.Text = "Turns: 0";
             toolStripTimer.Text = "Time: 00:00";
             startTime = new DateTime();
-            for(int i=0;i<5;i++)
-                game.ShiftRandom();
+            game.TossBeforeGame(1000);
             RefreshButtonField();
         }
         private void startMenu_Click(object sender, EventArgs e)

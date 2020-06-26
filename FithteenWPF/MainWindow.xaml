@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FithteenWPF"
         mc:Ignorable="d"
-        Title="Barley-break" Height="500" Width="460" Loaded="Fifteen_Load">
+        Title="Barley-break" Height="500" Width="460" Loaded="Fifteen_Load" MinWidth="270" MinHeight="250">
     <DockPanel LastChildFill="true">
         <Menu DockPanel.Dock="Top">
             <MenuItem Name="MenuSrartGame" Header="Start game" FontSize="16" Click="SrartGame"/>
@@ -42,6 +42,5 @@
             <Button Name="button14" Tag="14"/>
             <Button Name="button15" Tag="15"/>
         </UniformGrid>
-
     </DockPanel>
 </Window>

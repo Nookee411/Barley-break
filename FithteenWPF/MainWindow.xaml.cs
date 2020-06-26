@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using Game_Library;
 
 namespace FithteenWPF
@@ -22,18 +23,32 @@ namespace FithteenWPF
     public partial class MainWindow : Window
     {
         Game game;
-        DateTime startTime;
         int turn = 0;
+        DateTime time;
+        DispatcherTimer timer;
         public MainWindow()
         {
             InitializeComponent();
             game = new Game(16);
-            startTime = new DateTime(0);
+            time = new DateTime(0);
+
+            timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += Timer_tick;
+            timer.Start();
+        }
+        
+        void Timer_tick(object sender, EventArgs e)
+        {
+            Time.Header = "Time:" + time.ToString("mm:ss");
+            time = time.AddSeconds(1);
         }
 
         private void SrartGame(object sender, RoutedEventArgs e)
         {
             GameStart();
+            time = new DateTime(0);
+            turn = 0;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -41,6 +56,7 @@ namespace FithteenWPF
             int position = Convert.ToInt32(((Button)sender).Tag);
             game.Shift(position);
             Turns.Header = "Turns: " + turn;
+
             turn++;
             RefreshButtonField();
             if (game.EndGameCheck()){
@@ -92,9 +108,7 @@ namespace FithteenWPF
         private void GameStart()
         {
             game.Start();
-            startTime = new DateTime();
-            for (int i = 0; i < 1; i++)
-                game.ShiftRandom();
+            game.TossBeforeGame(100);
             RefreshButtonField();
             turn = 0;
 

@@ -19,22 +19,23 @@ namespace Game_Library
         public Game(int size)
         {
             this.size = size;
-            field = new int[4, 4];
-            x0 = 3;
-            y0 = 3;
+            field =
+            field = new int[size, size];
+            x0 = 0;
+            y0 = 0;
             turnCounter = 0;
             carataker = new Carataker();
         }
 
         private int CoordinatesToPosition(int x, int y)
         {
-            return y * 4 + x;
+            return y * field.GetLength(0) + x;
         }
 
         private void PositionToCoordinates(int position, out int x, out int y)
         {
-            x = position % 4;
-            y = position / 4;
+            x = position % size;
+            y = position / size;
             return;
         }
 
@@ -47,15 +48,14 @@ namespace Game_Library
                     field[i, j] = CoordinatesToPosition(i, j) + 1;
                 }
             }
-            x0 = 3;
-            y0 = 3;
+            x0 =y0 = field.GetLength(0)-1;
             field[x0, y0] = 0;
             turnCounter = 0;
         }
 
         public int GetNumber(int position)
         {
-            if (position > 15 || position < 0)
+            if (position > Math.Pow(size,2) || position < 0)
                 throw new IndexOutOfRangeException("Position out of range");
             else
             {
@@ -85,7 +85,7 @@ namespace Game_Library
             int y = y0;
             if (a == 0)
             {
-                if (x == 3)
+                if (x == size-1)
                     x--;
                 else
                     x++;
@@ -99,7 +99,7 @@ namespace Game_Library
             }
             else if (a == 2)
             {
-                if (y == 3)
+                if (y == size-1)
                     y--;
                 else
                     y++;
@@ -122,13 +122,13 @@ namespace Game_Library
 
         public bool EndGameCheck()
         {
-            if (field[3, 3] == 0)
+            if (field[size-1, size-1] == 0)
             {
                 for (int i = 0; i < field.GetLength(0); i++)
                 {
                     for (int j = 0; j < field.GetLength(1); j++)
                     {
-                        if (CoordinatesToPosition(i, j) != 15 && field[i, j] != CoordinatesToPosition(i, j) + 1)
+                        if (CoordinatesToPosition(i, j) != Math.Pow(size,2)-1 && field[i, j] != CoordinatesToPosition(i, j) + 1)
                             return false;
                     }
                 }
@@ -164,6 +164,12 @@ namespace Game_Library
                     }
                 }
             }
+        }
+
+        public void TossBeforeGame(int iterations)
+        {
+            for(int i =0;i<iterations;i++)
+            this.ShiftRandom();
         }
     }
 
