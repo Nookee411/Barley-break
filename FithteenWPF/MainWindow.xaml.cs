@@ -28,6 +28,8 @@ namespace FithteenWPF
         DispatcherTimer timer;
         public MainWindow()
         {
+            this.MinHeight = 250;
+            this.MinWidth = 400;
             InitializeComponent();
             game = new Game(4);
             time = new DateTime(0);

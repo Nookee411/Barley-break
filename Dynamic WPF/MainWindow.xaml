@@ -1,0 +1,34 @@
+﻿<Window x:Class="Dynamic_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dynamic_WPF"
+        mc:Ignorable="d"
+        Title="Fithteen" Height="450" Width="800" MinHeight="200" MinWidth="250">
+    <Grid>
+        <DockPanel LastChildFill="true">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Name="MenuSrartGame" Header="Start game" FontSize="16" Click="SrartGame"/>
+                <MenuItem Name="Size" Header="Size: " FontSize="16" IsEnabled="False"/>
+                <TextBox Name="tbSize" FontSize="16" Height="30" Width="100"/>
+                <Button Name="OK" Content="OK" FontSize="16" IsEnabled="True" Click="OK_Click" Height="30" Width="30"/>
+                <MenuItem Name="Turns" Header="Turns: " FontSize="16" IsEnabled="False"/>
+                <MenuItem Name="Time" Header="Time: " FontSize="16" IsEnabled="False"/>
+
+            </Menu>
+            <UniformGrid Name="uniformGrid" DockPanel.Dock="Bottom" Rows="4" Columns="4" Margin="2,2,2,2" >
+                <!--<UniformGrid.Resources>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Focusable" Value="False" />
+                        <EventSetter Event="Click" Handler="Button_Click"/>
+                        <Setter Property="FontSize" Value="26"/>
+                        <Setter Property="Content" Value=""/>
+                        <Setter Property="Margin" Value="2,2,2,2"/>
+                        <Setter Property="FontWeight" Value="Heavy"/>
+                    </Style>
+                </UniformGrid.Resources>-->
+            </UniformGrid>
+        </DockPanel>
+    </Grid>
+</Window>

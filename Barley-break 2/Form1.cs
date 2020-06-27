@@ -23,11 +23,14 @@ namespace Barley_break_2
         public Form1()
         {
             InitializeComponent();
+            this.MinimumSize = new Size(250, 300);
 
         }
 
         private void button0_Click(object sender, EventArgs e)
         {
+            if (!timer1.Enabled)
+                timer1.Start();
             int pos = Convert.ToInt32(((Button)sender).Tag);
             game.Shift(pos);
             RefreshButtonField();
@@ -35,6 +38,7 @@ namespace Barley_break_2
             toolStripLabel1.Text = "Turns: " + turns.ToString();
             if (game.EndGameCheck())
             {
+                timer1.Stop();
                 time = new DateTime(0);
                 turns = 0;
                 MessageBox.Show("Победа");
@@ -136,7 +140,6 @@ namespace Barley_break_2
             turns = 0;
             toolStripLabel1.Text = "Turns: " + turns.ToString();
             time = new DateTime(0);
-            timer1.Start();
             timer1.Interval = 1000;
         }
 
