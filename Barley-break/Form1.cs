@@ -67,10 +67,11 @@ namespace Barley_break
         private void GameStart()
         {
             game.Start();
+            timer.Start();
             toolStripCounter.Text = "Turns: 0";
             toolStripTimer.Text = "Time: 00:00";
             startTime = new DateTime();
-            game.TossBeforeGame(1000);
+            game.TossBeforeGame(1);
             RefreshButtonField();
         }
         private void startMenu_Click(object sender, EventArgs e)
@@ -93,6 +94,7 @@ namespace Barley_break
             
             if (game.EndGameCheck())
             {
+                timer.Stop();
                 EndGameForm egf = new EndGameForm(game.GetTurnCounter, startTime);
                 egf.ShowDialog();
                 GameStart();

@@ -123,6 +123,7 @@ namespace Dynamic_WPF
             time = new DateTime(0);
             turn = 0;
             game.Start();
+            timer.Start();
             game.TossBeforeGame(1000);
             RefreshButtonField();
             Turns.Header = "Turns: " + turn;
