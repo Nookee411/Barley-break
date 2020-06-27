@@ -39,8 +39,8 @@ namespace Dynamic_WPF
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            Time.Header = "Time: " + time.ToString("mm:ss");
             time = time.AddSeconds(1);
+            Time.Header = "Time: " + time.ToString("mm:ss");
         }
 
         private void OK_Click(object sender, RoutedEventArgs e)
@@ -78,6 +78,11 @@ namespace Dynamic_WPF
 
         private void button0_Click(object sender, RoutedEventArgs e)
         {
+            game.Save();
+            if(!timer.IsEnabled)
+            {
+                timer.Start();
+            }
             int position = Convert.ToInt32(((Button)sender).Tag);
             game.Shift(position);
             RefreshButtonField();
@@ -87,6 +92,7 @@ namespace Dynamic_WPF
             {
                 timer.Stop();
                 MessageBox.Show($"Победа! \nВремя:{time.ToString("mm:ss")}\nTurns: {turn}");
+                game.Wipe();
                 GameStart();
             }
         }
@@ -123,11 +129,27 @@ namespace Dynamic_WPF
             time = new DateTime(0);
             turn = 0;
             game.Start();
-            timer.Start();
-            game.TossBeforeGame(1000);
+            game.TossBeforeGame(1);
             RefreshButtonField();
             Turns.Header = "Turns: " + turn;
-            timer.Start();
+            Time.Header = "Time: " + time.ToString("mm:ss");
+        }
+
+        private void KeyDown_Click(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Z && Keyboard.Modifiers == ModifierKeys.Control)
+                StepBack_Click(sender, e);
+        }
+
+        private void StepBack_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                game.Restore();
+                RefreshButtonField();
+            }
+            catch
+            { }
         }
     }
 }

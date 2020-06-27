@@ -37,13 +37,12 @@ namespace FithteenWPF
             timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += Timer_tick;
-            timer.Start();
         }
         
         void Timer_tick(object sender, EventArgs e)
         {
-            Time.Header = "Time:" + time.ToString("mm:ss");
             time = time.AddSeconds(1);
+            Time.Header = "Time:" + time.ToString("mm:ss");
         }
 
         private void SrartGame(object sender, RoutedEventArgs e)
@@ -55,13 +54,18 @@ namespace FithteenWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            game.Save();
             int position = Convert.ToInt32(((Button)sender).Tag);
             game.Shift(position);
-            Turns.Header = "Turns: " + turn;
-
             turn++;
+            Turns.Header = "Turns: " + turn;
+            if (!timer.IsEnabled)
+                timer.Start();
+
             RefreshButtonField();
             if (game.EndGameCheck()){
+                timer.Stop();
+                game.Wipe();
                 MessageBox.Show("Победа!");
                 GameStart();
             }
@@ -122,6 +126,23 @@ namespace FithteenWPF
         private void Fifteen_Load(object sender, RoutedEventArgs e)
         {
             GameStart();
+        }
+
+        private void StepBack_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                game.Restore();
+                RefreshButtonField();
+            }
+            catch
+            { }
+        }
+
+        private void Form_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Z && Keyboard.Modifiers == ModifierKeys.Control)
+                StepBack_Click(sender, e);
         }
     }
 }

@@ -13,10 +13,10 @@ namespace Game_Library
 
         public Memento(int[,] s)
         {
-            field = new int[4, 4];
-            for (int i = 0; i < 4; i++)
+            field = new int[s.GetLength(0), s.GetLength(1)];
+            for (int i = 0; i < s.GetLength(0); i++)
             {
-                for (int j = 0; j < 4; j++)
+                for (int j = 0; j < s.GetLength(1); j++)
                     field[i, j] = s[i, j];
             }
         }

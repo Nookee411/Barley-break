@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Dynamic_WPF"
         mc:Ignorable="d"
-        Title="Fithteen" Height="450" Width="800" MinHeight="200" MinWidth="250">
+        Title="Fithteen" Height="450" Width="800" MinHeight="200" MinWidth="250" KeyDown="KeyDown_Click">
     <Grid>
         <DockPanel LastChildFill="true">
             <Menu DockPanel.Dock="Top">
@@ -15,6 +15,7 @@
                 <Button Name="OK" Content="OK" FontSize="16" IsEnabled="True" Click="OK_Click" Height="30" Width="30"/>
                 <MenuItem Name="Turns" Header="Turns: " FontSize="16" IsEnabled="False"/>
                 <MenuItem Name="Time" Header="Time: " FontSize="16" IsEnabled="False"/>
+                <MenuItem Name="StepBack" Header="Step Back" FontSize="16" Click="StepBack_Click"/>
 
             </Menu>
             <UniformGrid Name="uniformGrid" DockPanel.Dock="Bottom" Rows="4" Columns="4" Margin="2,2,2,2" >

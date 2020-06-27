@@ -145,17 +145,18 @@ namespace Game_Library
 
         public void Restore()
         {
-            if(carataker.Size!=0)
-            field = carataker.Restore().State;
-            FindZero();
+            if (carataker.Size != 0)
+            
+                field = carataker.Restore().State;
+                FindZero();
             
         }
 
         private void FindZero()
         {
-            for(int i=0;i<4;i++)
+            for(int i=0;i<field.GetLength(0);i++)
             {
-                for(int j=0;j<4;j++)
+                for(int j=0;j<field.GetLength(1);j++)
                 {
                     if(field[i,j]==0)
                     {
@@ -170,6 +171,11 @@ namespace Game_Library
         {
             for(int i =0;i<iterations;i++)
             this.ShiftRandom();
+        }
+
+        public void Wipe()
+        {
+            carataker = new Carataker();
         }
     }
 

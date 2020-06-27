@@ -97,6 +97,7 @@ namespace Barley_break
                 timer.Stop();
                 EndGameForm egf = new EndGameForm(game.GetTurnCounter, startTime);
                 egf.ShowDialog();
+                game.Wipe();
                 GameStart();
 
             }

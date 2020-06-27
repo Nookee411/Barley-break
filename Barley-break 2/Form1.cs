@@ -24,17 +24,20 @@ namespace Barley_break_2
         {
             InitializeComponent();
             this.MinimumSize = new Size(250, 300);
+            timer1.Interval = 1000;
 
         }
 
         private void button0_Click(object sender, EventArgs e)
         {
+            game.Save();
             if (!timer1.Enabled)
                 timer1.Start();
             int pos = Convert.ToInt32(((Button)sender).Tag);
             game.Shift(pos);
             RefreshButtonField();
             turns++;
+            
             toolStripLabel1.Text = "Turns: " + turns.ToString();
             if (game.EndGameCheck())
             {
@@ -43,6 +46,8 @@ namespace Barley_break_2
                 turns = 0;
                 MessageBox.Show("Победа");
                 GameStart();
+                toolStripLabelTime.Text = "Time: " + time.ToString("mm:ss");
+
             }
         }
 
@@ -135,12 +140,12 @@ namespace Barley_break_2
         private void GameStart()
         {
             game.Start();
-            game.TossBeforeGame(1000);
+            game.TossBeforeGame(1);
             RefreshButtonField();
             turns = 0;
             toolStripLabel1.Text = "Turns: " + turns.ToString();
             time = new DateTime(0);
-            timer1.Interval = 1000;
+            
         }
 
         private void GameEnd()
@@ -163,13 +168,40 @@ namespace Barley_break_2
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            time = time.AddSeconds(1);
             toolStripLabelTime.Text = "Time: " + time.ToString("mm:ss");
-            time =time.AddSeconds(1);
+            
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
             InitiateField();
+        }
+
+        private void stepBackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                game.Restore();
+                RefreshButtonField();
+            }
+            catch 
+            { }
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                if (e.KeyCode == Keys.Z && ModifierKeys == Keys.Control)
+                {
+                    game.Restore();
+                    RefreshButtonField();
+                }
+            }
+            catch
+            { }
+            
         }
     }
 }
