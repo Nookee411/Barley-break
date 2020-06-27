@@ -29,7 +29,7 @@ namespace FithteenWPF
         public MainWindow()
         {
             InitializeComponent();
-            game = new Game(16);
+            game = new Game(4);
             time = new DateTime(0);
 
             timer = new DispatcherTimer();
@@ -60,7 +60,7 @@ namespace FithteenWPF
             turn++;
             RefreshButtonField();
             if (game.EndGameCheck()){
-               
+                MessageBox.Show("Победа!");
                 GameStart();
             }
         }
@@ -108,9 +108,12 @@ namespace FithteenWPF
         private void GameStart()
         {
             game.Start();
-            game.TossBeforeGame(100);
+            game.TossBeforeGame(1);
             RefreshButtonField();
             turn = 0;
+            Turns.Header = "Turns: " + turn;
+            time = new DateTime(0);
+            Time.Header = "Time:" + time.ToString("mm:ss");
 
         }
 

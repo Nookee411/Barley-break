@@ -20,7 +20,7 @@ namespace Barley_break
         public Fifteen()
         {
             InitializeComponent();
-            game = new Game(16);
+            game = new Game(4);
             startTime = new DateTime(0);
         }
 
